@@ -1,0 +1,70 @@
+<!-- courses/templates/base.html -->
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning App</title>
+    <!-- Include your CSS links here -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    <header>
+        <h1>Welcome to E-Learning App</h1>
+    </header>
+
+    <nav>
+        <!-- Navigation links go here -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <main>
+        <section class="featured-courses">
+            <h2>Featured Courses</h2>
+            <!-- Display featured courses with details -->
+            <div class="course">
+                <h3>Course Title 1</h3>
+                <p>Course description goes here. Lorem ipsum dolor sit amet...</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div class="course">
+                <h3>Course Title 2</h3>
+                <p>Course description goes here. Lorem ipsum dolor sit amet...</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <!-- Add more featured courses as needed -->
+        </section>
+
+        <section class="categories">
+            <h2>Course Categories</h2>
+            <!-- Display course categories with links -->
+            <ul>
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+                <!-- Add more categories as needed -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 E-Learning App. All rights reserved.</p>
+    </footer>
+    <!-- Include your JavaScript links here -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

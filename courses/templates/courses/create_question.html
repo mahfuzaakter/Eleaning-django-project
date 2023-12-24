@@ -1,0 +1,12 @@
+<!-- courses/templates/courses/create_question.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Create Question</h2>
+  <form method="post" action="{% url 'create_question' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Question</button>
+  </form>
+{% endblock %}
